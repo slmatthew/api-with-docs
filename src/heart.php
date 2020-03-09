@@ -6,6 +6,7 @@ header('powered-by: slmatthew');
 class API {
 	public const API_ERROR_UNKNOWN_METHOD = 1;
 	public const API_ERROR_MISSING_PARAMS = 2;
+	public const API_ERROR_ACCESS_DENIED = 3;
 
 	private $methods = [];
 	private $secureKey = '';
@@ -19,7 +20,7 @@ class API {
 	}
 
 	public function checkMethod(string $name, string $version) {
-		if($this->secureKey && (!isset($_REQUEST['key']) || $_REQUEST['key'] != 'w[!Q(xYAXc^4y]V')) $this->wrapError(403, 'access denied');
+		if($this->secureKey && (!isset($_REQUEST['key']) || $_REQUEST['key'] != $this->secureKey)) $this->wrapError(self::API_ERROR_ACCESS_DENIED, 'access denied');
 
 		if(isset($this->methods[$version][$name])) {
 			$method_params = $this->methods[$version][$name]['params'];
