@@ -26,40 +26,40 @@ $docs->markdown(false); // генерация в html-файл
 
 ```php
 $docs->addDocs('login', 'Авторизация', [
-	[
-		'name' => 'username',
-		'type' => 'string',
-		'desc' => 'Имя пользователя'
-	],
-	[
-		'name' => 'password',
-		'type' => 'string',
-		'desc' => 'Пароль'
-	]
+  [
+    'name' => 'username',
+    'type' => 'string',
+    'desc' => 'Имя пользователя'
+  ],
+  [
+    'name' => 'password',
+    'type' => 'string',
+    'desc' => 'Пароль'
+  ]
 ], [
-	'lang' => 'php',
-	'code' => "file_get_contents('https://some.api/login?username=admin&password=123123');"
+  'lang' => 'php',
+  'code' => "file_get_contents('https://some.api/login?username=admin&password=123123');"
 ]);
 
 $docs->addDocs('login', 'Авторизация', [
-	[
-		'name' => 'username',
-		'type' => 'string',
-		'desc' => 'Имя пользователя'
-	],
-	[
-		'name' => 'password',
-		'type' => 'string',
-		'desc' => 'Пароль'
-	],
-	[
-		'name' => 'hash',
-		'type' => 'string',
-		'desc' => 'Супер-секретный хеш'
-	]
+  [
+    'name' => 'username',
+    'type' => 'string',
+    'desc' => 'Имя пользователя'
+  ],
+  [
+    'name' => 'password',
+    'type' => 'string',
+    'desc' => 'Пароль'
+  ],
+  [
+    'name' => 'hash',
+    'type' => 'string',
+    'desc' => 'Супер-секретный хеш'
+  ]
 ], [
-	'lang' => 'php',
-	'code' => "file_get_contents('https://some.api/login?username=admin&password=123123&hash=pleasedonatetoslmatthew');"
+  'lang' => 'php',
+  'code' => "file_get_contents('https://some.api/login?username=admin&password=123123&hash=pleasedonatetoslmatthew');"
 ], '1.1');
 ```
 
@@ -74,9 +74,9 @@ $docs->addDocs('login', 'Авторизация', [
 
 ```php
 $methodParamDoc = [
-	'name' => 'username',
-	'type' => 'string',
-	'desc' => 'Имя пользователя'
+  'name' => 'username',
+  'type' => 'string',
+  'desc' => 'Имя пользователя'
 ];
 ```
 
@@ -90,8 +90,8 @@ $methodParamDoc = [
 
 ```php
 $example = [
-	'lang' => 'php',
-	'code' => "file_get_contents('https://donate.slmatthew.dev');"
+  'lang' => 'php',
+  'code' => "file_get_contents('https://donate.slmatthew.dev');"
 ];
 ```
 

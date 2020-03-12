@@ -28,7 +28,7 @@ $api = new API();
 
 ```php
 $api->addMethod('login', ['username', 'password'], function() use($api) {
-	$api->wrapResult($_REQUEST['username'] == 'admin' && $_REQUEST['password'] == '12345qwerty');
+  $api->wrapResult($_REQUEST['username'] == 'admin' && $_REQUEST['password'] == '12345qwerty');
 });
 ```
 
@@ -45,8 +45,8 @@ $api->getVersion(); // string / например, 1.0
 
 ```php
 $api->wrapResult([
-	'donate' => true,
-	'link' => 'https://donate.slmatthew.dev'
+  'donate' => true,
+  'link' => 'https://donate.slmatthew.dev'
 ]);
 
 /**
@@ -66,11 +66,11 @@ $api->wrapResult([
 
 ```php
 $api->wrapError(4, 'some error', [
-	'wtf' => [
-		'subscribe',
-		'to',
-		'pewdiepie'
-	]
+  'wtf' => [
+    'subscribe',
+    'to',
+    'pewdiepie'
+  ]
 ]);
 
 /**
