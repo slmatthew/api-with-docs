@@ -54,7 +54,7 @@ class API {
 		return true;
 	}
 
-	public function wrapResponse($data) {
+	public function wrapResult(array $data) {
 		echo json_encode(['ok' => true, 'result' => $data], JSON_UNESCAPED_UNICODE);
 
 		exit();
@@ -72,7 +72,7 @@ class API {
 	public function onData() { $this->checkMethod($this->getMethod(), $this->getVersion()); }
 }
 
-class APIDocs extends API {
+class APIDocs {
 	private $docs = [];
 	private $isMarkdown = false;
 
